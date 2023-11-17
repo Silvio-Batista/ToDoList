@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styleEdit.css')}}">
+    <title>Edit</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>Edit your task</h2>
+            <form action="{{ url_for('edit', index=index) }}" method="post">
+                <div class="row">
+                    <input type="text" name="todo" value="{{todo['task']}}">
+                <button type="submit">Edit</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
